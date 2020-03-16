@@ -8,7 +8,7 @@ import java.lang.String;
 public class Catalog implements Serializable {
     private String name;
     private String path;
-    private List<Document> documents = new ArrayList<>();
+    private List<Document> documents = new ArrayList<>(); //lista de documente din cataog
 
     public Catalog(String name, String path) {
         this.name = name;
@@ -43,7 +43,7 @@ public class Catalog implements Serializable {
         documents.add(doc);
     }
 
-    public Document findById(String id) {        
+    public Document findById(String id) { //gasirea documentului din catalog dupa id. Se returneaza null in cazul in care nu se gaseste
         return documents.stream()
                 .filter(d -> d.getId().equals(id)).findFirst().orElse(null);
     }
