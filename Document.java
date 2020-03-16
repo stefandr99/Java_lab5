@@ -12,7 +12,7 @@ public class Document implements Serializable {
     String id;
     String name;
     String location;
-    private Map<String, Object> tags = new HashMap<>();
+    private Map<String, Object> tags = new HashMap<>(); // map care contine tagurile pe care le are un document
 
 
     public Document() {
@@ -39,7 +39,7 @@ public class Document implements Serializable {
         this.name = name;
     }
 
-    public void addTag(String key, Object obj) {
+    public void addTag(String key, Object obj) { //adaugarea unui element in map ul cu taguri
         tags.put(key, obj);
     }
 }
